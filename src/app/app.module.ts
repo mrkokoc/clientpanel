@@ -6,6 +6,7 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from "angularfire2/dat
 import { AngularFireAuthModule } from "angularfire2/auth";
 import { environment } from "../environments/environment";
 import { FormsModule } from "@angular/forms";
+import { FlashMessagesModule } from "angular2-flash-messages";
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -48,6 +49,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    FlashMessagesModule,
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase, 'clientpanel'),
     AngularFireAuthModule
