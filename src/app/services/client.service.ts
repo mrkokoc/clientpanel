@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from "angularfire2/database";
 import { Observable } from "rxjs/Observable";
-import {Client} from "../models/Client";
+import { Client } from "../models/Client";
 
 @Injectable()
 export class ClientService {
@@ -26,5 +26,10 @@ export class ClientService {
 
   newClient(client: Client) {
     this.clientsRef.push(client);
+  };
+
+  getClient(id: string) {
+    this.client = this.db.object('/clients/' + id).valueChanges();
+    return this.client;
   };
 }
