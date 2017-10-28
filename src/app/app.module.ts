@@ -5,6 +5,7 @@ import { AngularFireModule } from "angularfire2";
 import { AngularFireDatabaseModule, AngularFireDatabase } from "angularfire2/database";
 import { AngularFireAuthModule } from "angularfire2/auth";
 import { environment } from "../environments/environment";
+import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -25,7 +26,8 @@ import { ClientService } from "./services/client.service";
 const appRoutes: Routes = [
   {path: '', component: DashboardComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'add-client', component: AddClientComponent}
 ];
 
 @NgModule({
@@ -45,6 +47,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase, 'clientpanel'),
     AngularFireAuthModule
