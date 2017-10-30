@@ -20,8 +20,11 @@
       "prefix": "app",
       "styles": [
         "styles.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
         "../node_modules/font-awesome/css/font-awesome.css",
-        "../node_modules/bootstrap/dist/css/bootstrap.css"
+        "../node_modules/typeface-josefin-slab/index.css",
+        "../node_modules/typeface-fredericka-the-great/index.css",
+        "../node_modules/typeface-lobster/index.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
